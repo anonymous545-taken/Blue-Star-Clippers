@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue-Star Clippers - Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="Logo.jpg" alt="Blue-Star Clippers Logo" class="logo" />
+      Blue-Star Clippers
+    </div>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="navbar-links" id="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+  </nav>
+
+  <main class="content contact-form-container">
+    <h1>Book a Haircut</h1>
+    <form id="booking-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" name="surname" placeholder="Your surname" required />
+
+      <label for="phone">Cell Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="^\+?\d{7,15}$" required />
+
+      <fieldset class="haircut-options">
+        <legend>Select Haircut Option</legend>
+        <label><input type="radio" name="haircut" value="Clean Cut (0 hair)" required /> Clean Cut (0 hair)</label>
+        <label><input type="radio" name="haircut" value="Taper Fade" /> Taper Fade</label>
+        <label><input type="radio" name="haircut" value="Mid Fade" /> Mid Fade</label>
+        <label><input type="radio" name="haircut" value="High Fade" /> High Fade</label>
+        <label><input type="radio" name="haircut" value="Buzz Cut" /> Buzz Cut</label>
+        <label><input type="radio" name="haircut" value="Shave" /> Shave</label>
+      </fieldset>
+
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="form-message" role="alert" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+
+  <footer class="footer">
+    <p>Contact us: <a href="tel:+27670062448">+27 67 006 2448</a></p>
+  </footer>
+</body>
+</html>
